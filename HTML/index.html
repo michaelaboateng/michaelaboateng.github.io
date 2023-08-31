@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="resources/css/index.css"/> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ede78b4e84.js" crossorigin="anonymous"></script>
+    <title>Michaela Boateng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div id="header">
+    <body>
+        <ul class="breadcrumb">
+          <li>
+            <a href="#">Home</a>
+          </li>
+            <li>
+              <a href="#about">About  </a>
+            </li>
+            <li>
+              <a href="#portfolio">Projects  </a>
+            </li>
+            <li>
+              <a href="#Contact">Contact  </a>
+            </li>
+          </ul>
+          <br>
+        <img class="name" src="M.png">
+        <img class="headshot" src="file:///Users/micky3/Documents/PortfolioPage/HTML/Headshot.jpg" alt="a headshot of Michaela Boateng">
+        <h1 class="greeting">Hi, I'm <br><span>Michaela</span>
+        </h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+</div>
+<div id="about">
+      
+        <h2 class="about-me">About Me</h2>
+        <p class= "bio" >Hello! I am Michaela Boateng. I am a Biological Sciences student at the University of Cincinnati. I'm enthusiastic to work in web development and analysis because I'm motivated and love science. 
+            Laboratory research has taught me experimental design, data gathering, and analysis. Although my previous career aspirations were in medicine, my experience in laboratory research has given me 
+            a solid foundation in experimental design, data collection, and analysis. I'm delighted to apply my analytical skills to data analysis and web development challenges after working in lab research. 
+            As a dedicated and detail-oriented person, I can help any firm succeed. I'm a determined, passionate learner with great technical skills.</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <br>
+              </div>
+              
+       <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li class="tab-contents-li">HTML</li>
+              <li class="tab-contents-li">CSS</li>
+              <li class="tab-contents-li">SQL</li>
+              <li class="tab-contents-li">JavaScript</li>
+              <li class="tab-contents-li">Excel</li> 
+           </ul>
+            </div>  
+            <div class="tab-contents" id="education">
+              <ul>
+                <li class="experience-tab-li"> HTML Certificate</li>
+                <li class="experience-tab-li">CSS Certificate</li>
+                <li class="experience-tab-li">SQL Certificate</li>
+                <li class="experience-tab-li">Biology Degree</li>
+            </ul>
+            </div>   
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
+</div>
+<div id="portfolio">
+      <div class="container">
+            <h2 class="sub-title">My Work</h2>
+            <div class="work-list">
+                <div class="work">
+                    <img src="livebnb.png">
+                    <div class="layer">
+                      <h3>Livebnb</h3>
+                      <p>A global platform connecting travelers with unique local accommodations and experiences, transforming ordinary trips into memorable adventures.</p>
+                      <a href="/Users/micky3/Documents/PortfolioPage/HTML/Livebnb/index.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+</div>
+<div id="Contact">
+  <div class="container"></div>
+    <h2 class="contact">Contact</h2>
+      <ul class="contact-info">
+        <li> Email: boatengmichaelay@gmail.com </li>
+        <li><a href="https://www.linkedin.com/in/michaela-boateng/">LinkedIn</a> </li>
+        <li><a href="https://github.com/michaelaboateng/michaelaboateng.github.io">Github</a> </li>
+      </ul>
+  </div>
+</div>
+
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+          }
+</script>
+    </body>
+
+ 
+    
