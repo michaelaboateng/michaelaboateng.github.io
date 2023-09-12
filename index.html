@@ -14,8 +14,8 @@
     <title>Michaela Boateng</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<body>
 <div id="header">
-    <body>
         <ul class="breadcrumb">
           <li>
             <a href="#">Home</a>
@@ -88,24 +88,43 @@
             <h2 class="sub-title">My Work</h2>
             <div class="work-list">
                 <div class="work">
-                    <img src="livebnb.png">
+                    <img src="LivebnbImg.png">
                     <div class="layer">
                       <h3>Livebnb</h3>
                       <p>A global platform connecting travelers with unique local accommodations and experiences, transforming ordinary trips into memorable adventures.</p>
                       <a href="Livebnb/index.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
+                <div class="work">
+                  <img src="Ecommerce.png">
+                  <div class="layer">
+                    <h3>Redstore</h3>
+                    <p>Showcasing a curated selection of men's apparel, our e-commerce platform combines style, quality, and convenience, ensuring a premium shopping experience.</p>
+                    <a href="Ecommerce/index.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                  </div>
+              </div>
             </div> 
         </div>
 </div>
 <div id="Contact">
-  <div class="container"></div>
-    <h2 class="contact">Contact</h2>
-      <ul class="contact-info">
-        <li> Email: boatengmichaelay@gmail.com </li>
-        <li><a href="https://www.linkedin.com/in/michaela-boateng/">LinkedIn</a> </li>
-        <li><a href="https://github.com/michaelaboateng/michaelaboateng.github.io">Github</a> </li>
-      </ul>
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+          <h2 class="sub-title">Contact Me</h2>
+          <p>Email: boatengmichaelay@gmail.com </p>
+          <p><a href="https://www.linkedin.com/in/michaela-boateng/">LinkedIn: Michaela Boateng</a></p>
+
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+          <span id="msg">Hello</span>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -127,7 +146,28 @@
         document.getElementById(tabname).classList.add("active-tab");
           }
 </script>
-    </body>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwvThlpKYJDDybkw0TYqL-m3Wf_2p0SNPvXReJ0ce44TbwSo042ci0pY1V36lSyrgvx2Q/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+ 
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML = " "
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  });
+
+
+</script>
+</body>
 
  
     
